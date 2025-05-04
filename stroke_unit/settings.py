@@ -26,7 +26,15 @@ SECRET_KEY = 'django-insecure-uh-@60xu+dx7!13vswq_4qe*dtlj^xe72*01ly_14bas%v2l4@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'akontjoe.onrender.com']
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://akontjoe.onrender.com',
+    'http://akontjoe.onrender.com',  # Include both HTTP and HTTPS
+    'http://localhost:8000',
+    'http://127.0.0.1:8000'
+]
+
 AUTH_USER_MODEL = 'accounts.User'
 
 
